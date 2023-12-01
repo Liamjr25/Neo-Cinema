@@ -1,0 +1,129 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="NeoCinemas.Site2" %>
+
+<!DOCTYPE html>
+
+<%--<html xmlns="http://www.w3.org/1999/xhtml">--%>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 892px;
+        }
+        .auto-style2 {
+            height: 23px;
+        }
+        #myImage {
+            height: 108px;
+            width: 101px;
+        }
+        Menu1 {
+            background-image: url("Images/html_table.jpg");
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table style="width: 100%;">
+            <tr>
+                <td class="auto-style2" colspan="3" style="background-color: #00FFFF; color: #FFFFFF; font-weight: 600; font-size: x-large; font-family: 'Segoe UI'; background-image: url('/Images/html_table.jpg');">
+                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" style="text-align: right">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/AdminHome.aspx" Text="Admin" Value="Admin"></asp:MenuItem>
+                            <asp:MenuItem Text="Add" Value="Add">
+                                <asp:MenuItem NavigateUrl="~/AddNewAdmin.aspx" Text="New Admin" Value="New Admin"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/AddMovieDetails.aspx" Text="New Movie" Value="New Movie"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Delete" Value="Delete">
+                                <asp:MenuItem NavigateUrl="~/DeleteAdmin.aspx" Text="Delete Admin" Value="Delete Admin"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/DeleteMovie.aspx" Text="Movie By Title" Value="Movie By Title"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/DeleteByMovieCode.aspx" Text="By Movie Code" Value="By Movie Code"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/DeleteBooking.aspx" Text="DeleteBooking" Value="DeleteBooking"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Update" Value="Update">
+                                <asp:MenuItem NavigateUrl="~/UpdateAdmin.aspx" Text="Update Admin" Value="Update Admin"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/UpdateMovie.aspx" Text="Update Movie" Value="Update Movie"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/UpdateBooking.aspx" Text="Update Booking" Value="Update Booking"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/StaffMembersPage.aspx" Text="Staff Members Table" Value="Staff Members Table"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Home1.aspx" Text="Sign Out" Value="Sign Out"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style1">
+                    &nbsp;</td>
+                <td>
+                    <asp:Label ID="lblFirstName" runat="server" Text="[user] " style="text-shadow: 2px 2px 8px #aaff00;"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style1">
+                    <img id="myImage" onclick="changeImage()" src="Images/avatar.png">
+
+<p style="text-shadow: 2px 2px 8px #aaff00;">Click the avatar to change colors.</p>
+
+<script>
+    function changeImage() {
+        var image = document.getElementById('myImage');
+        if (image.src.match("avatar.jpg")) {
+            image.src = "Images/avatar.png";
+        } else {
+            image.src = "Images/avatar.jpg";
+        }
+    }
+</script>
+
+                </td>
+                <td>
+                  
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style1">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style1">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style1">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style1">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style1">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style1">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style1">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        </body>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</html>

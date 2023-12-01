@@ -1,0 +1,426 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="NeoCinemas.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+
+
+
+        /** {
+            color: white;
+        }*/
+        Menu1 {
+            text-align: center;
+        }
+        body {
+            background-color: #36454F;
+        }
+   :root {
+  --primary-color: #f1faff;
+  --text-dark: #030712;
+  --text-light: #6b7280;
+  --extra-light: #fbfbfb;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+        .footer__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.footer__heading {
+  color: #6b7280;
+  font-size: 1rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.footer__heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 50px;
+  background-color: #6b7280;
+}
+
+.footer__col p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #6b7280;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer__col p:hover {
+  color: #6b7280;
+}
+
+.footer__col p i {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.instagram__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.footer__bar {
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.footer__form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.footer__form form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.footer__form input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #030712;
+  font-size: 0.8rem;
+}
+
+.footer__form .btn {
+  background-color:  #030712;
+  color: #ffffff;
+}
+@font-face {
+    font-family: Neon Club Music;
+    /*src: url(font1.otf);*/
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Neon Club Music;
+    font-weight: 900;
+}
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: #0e0e0e;
+}
+
+h1 {
+    color: #fff;
+    font-size: 5rem;
+    letter-spacing: .5rem;
+
+    text-shadow: 0 0 .5rem rgba(255, 0, 0, .5),
+                 0 0 1rem rgba(255, 0, 0, .9),
+                 0 0 1rem rgba(255, 0, 0, 1),
+                 0 0 1rem rgba(255, 0, 0, 1);
+}
+.container {
+    background: url(Images/techbg.jpg);
+    border: .5rem solid #fff;
+    padding: 3rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 .5rem rgba(255, 0, 0, .5),
+                0 0 1rem rgba(255, 0, 0, .9),
+                0 0 2rem rgba(255, 0, 0, 1),
+                
+                inset 0 0 .5rem rgba(255, 0, 0, .5),
+                inset 0 0 1rem rgba(255, 0, 0, .9),
+                inset 0 0 2rem rgba(255, 0, 0, 1);
+}
+
+span {
+    opacity: 1;
+    text-shadow: 0 0 .5rem rgba(255, 0, 0, .5),
+                 0 0 1rem rgba(255, 0, 0, .9),
+                 0 0 1rem rgba(255, 0, 0, 1),
+                 0 0 1rem rgba(255, 0, 0, 1);
+}
+
+.container:hover .a,
+.container:hover .e {
+    animation: blink1 1000ms ease-in-out infinite;
+}
+.container:hover .b {
+    animation: blink2 1000ms ease-in-out infinite;
+}
+.container:hover {
+    animation: container_blink 1000ms ease-in-out infinite;
+}
+
+@keyframes blink1 {
+    60% {
+        opacity: 1;
+        text-shadow: 0 0 .5rem rgba(255, 0, 0, .5),
+                     0 0 1rem rgba(255, 0, 0, .9),
+                     0 0 1rem rgba(255, 0, 0, 1),
+                     0 0 1rem rgba(255, 0, 0, 1);
+    }
+    70% {
+        opacity: .3;
+        text-shadow: none;
+    }
+    75% {
+        opacity: 1;
+        text-shadow: 0 0 .5rem rgba(255, 0, 0, .5),
+                     0 0 1rem rgba(255, 0, 0, .9),
+                     0 0 1rem rgba(255, 0, 0, 1),
+                     0 0 1rem rgba(255, 0, 0, 1);
+    }
+    100% {
+        opacity: .3;
+        text-shadow: none;
+    }
+}
+
+@keyframes blink2 {
+    20% {
+        opacity: 1;
+        text-shadow: 0 0 .5rem rgba(255, 0, 0, .5),
+                     0 0 1rem rgba(255, 0, 0, .9),
+                     0 0 1rem rgba(255, 0, 0, 1),
+                     0 0 1rem rgba(255, 0, 0, 1);
+    }
+    30% {
+        opacity: .3;
+        text-shadow: none;
+    }
+    40% {
+        opacity: 1;
+        text-shadow: 0 0 .5rem rgba(255, 0, 0, .5),
+                     0 0 1rem rgba(255, 0, 0, .9),
+                     0 0 1rem rgba(255, 0, 0, 1),
+                     0 0 1rem rgba(255, 0, 0, 1);
+    }
+    60% {
+        opacity: .3;
+        text-shadow: none;
+    }
+}
+
+@keyframes container_blink {
+    20% {
+        border: .5rem solid #fff;
+        box-shadow: 0 0 .5rem rgba(255, 0, 0, .5),
+                    0 0 1rem rgba(255, 0, 0, .9),
+                    0 0 2rem rgba(255, 0, 0, 1),
+                    
+                    inset 0 0 .5rem rgba(255, 0, 0, .5),
+                    inset 0 0 1rem rgba(255, 0, 0, .9),
+                    inset 0 0 2rem rgba(255, 0, 0, 1);
+    }
+    30% {
+        border: .5rem solid rgba(255, 255, 255, .3);
+        box-shadow: none;
+    }
+    40% {
+        border: .5rem solid #fff;
+        box-shadow: 0 0 .5rem rgba(255, 0, 0, .5),
+                    0 0 1rem rgba(255, 0, 0, .9),
+                    0 0 2rem rgba(255, 0, 0, 1),
+                    
+                    inset 0 0 .5rem rgba(255, 0, 0, .5),
+                    inset 0 0 1rem rgba(255, 0, 0, .9),
+                    inset 0 0 2rem rgba(255, 0, 0, 1);
+    }
+    60% {
+        border: .5rem solid rgba(255, 255, 255, .3);
+        box-shadow: none;
+    }
+}
+        .auto-style1 {
+            height: 21px;
+        }
+        .auto-style2 {
+            height: 72px;
+        }
+        .auto-style3 {
+            width: 495px;
+        }
+        .auto-style4 {
+            height: 21px;
+            width: 495px;
+        }
+        .auto-style5 {
+            height: 20px;
+        }
+        .auto-style6 {
+            width: 495px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table style="width:100%;">
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style3">&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="background-color: #333333" colspan="2" class="auto-style2">
+                    <nav>
+                        <div class="logo">
+                            <div class="container">
+                                <h1><span class="a">N</span>E<span class="b">O</span> C<span class="e">I</span>N<span class="b">E</span>M<span class="b">A</span> </h1>
+                                     <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" Font-Size="20pt" ForeColor="White" BackColor="Red" Font-Names="Cooper Std Black" style="text-align: center">
+                        <DynamicHoverStyle BackColor="Maroon" />
+                                         <DynamicMenuStyle BackColor="#3399FF" />
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Home1.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem Text="Now Showing" Value="Now Showing" NavigateUrl="~/NowShowing.aspx"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AllMovies.aspx" Text="All Movies" Value="All Movies"></asp:MenuItem>
+                            <asp:MenuItem Text="Coming Soon" Value="Coming Soon" NavigateUrl="~/ComingSoon.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Search Movie By" Value="Search Movie By">
+                                <asp:MenuItem NavigateUrl="~/SearchByTitle.aspx" Text="By Name/Title" Value="By Name/Title"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/SearchMovieByID1.aspx" Text="By ID" Value="By ID"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/SearchByMovieCode.aspx" Text="By Movie Code" Value="By Movie Code"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TheatreSeating.aspx" Text="Seating" Value="Seating"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AboutUs.aspx" Text="About Us" Value="About Us"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/CardPayment.aspx" Text="Card details" Value="Card details"></asp:MenuItem>
+                            <asp:MenuItem Text="Login" Value="Login" NavigateUrl="~/Login.aspx"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                            </div>
+                        </div>
+                    </nav>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style1">
+     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+       
+        
+        </asp:ContentPlaceHolder>
+                </td>
+                <td class="auto-style4"></td>
+            </tr>
+            <tr>
+                <td class="auto-style1"></td>
+                <td class="auto-style4"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <hr />
+                    <footer class="section__container footer__container">
+                        <div class="footer__col">
+                            <h4 class="footer__heading">CONTACT INFO</h4>
+                            <p>
+                                <i class="ri-map-pin-2-fill"></i>123, London Bridge Street, London
+                            </p>
+                            <p>
+                                <i class="ri-mail-fill"></i>support@neocinema.com</p>
+                            <p>
+                                <i class="ri-phone-fill"></i>(+012) 3456 789</p>
+                        </div>
+                        <div class="footer__col">
+                            <h4 class="footer__heading">COMPANY</h4>
+                            <p>
+                                Home</p>
+                            <p>
+                                About Us</p>
+                            <p>
+                                Work With Us</p>
+                            <p>
+                                Our Blog</p>
+                            <p>
+                                Terms &amp; Conditions</p>
+                        </div>
+                        <div class="footer__col">
+                            <h4 class="footer__heading">USEFUL LINK</h4>
+                            <p>
+                                Help</p>
+                            <p>
+                                Track My Booking</p>
+                            <p>
+                                4-D</p>
+                            <p>
+                                3-D</p>
+                            <p>
+                                2-D</p>
+                        </div>
+                        <div class="footer__col">
+                            <h4 class="footer__heading">INSTAGRAM</h4>
+                            <div class="instagram__grid">
+                                <img alt="instagram" src="Images/kevin-hart-reality-check.jpg" style="width: 242px" />
+                                <img alt="instagram" src="Images/neocinemalogo.jpg" />
+                                <img alt="instagram" src="Images/Flamin Hot.jpg" />
+                                <img alt="instagram" src="Images/JohnWickChapter4.jpg" width="150px" />
+                                <img alt="instagram" src="Images/GuardiansoftheGalaxyVol3.jpg" />
+                                <img alt="instagram" src="Images/oppenheimer.jpeg" width="250px" height="270px" />
+                            </div>
+                        </div>
+                    </footer>
+                    <hr />
+                    <div class="section__container footer__bar">
+                        <div class="copyright">
+                            Copyright © 2023 Web Design Mastery. All rights reserved.
+                        </div>
+                        <div class="footer__form">
+                            <input placeholder="ENTER YOUR EMAIL" type="text" />
+                            <button class="btn" type="submit">
+                                SUBSCRIBE
+                            </button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style3">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style3">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style3">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style3">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style3">&nbsp;</td>
+            </tr>
+        </table>
+    </form>
+    <div>
+       
+   
+    </form>
+     </body>
+</html>
